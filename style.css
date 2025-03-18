@@ -1,0 +1,87 @@
+/* Apply box-sizing border-box globally */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Set base font family for the body */
+body {
+    font-family: 'Arial', sans-serif; /* Choose a simple sans-serif font */
+    font-size: 1rem; /* Base font size */
+    line-height: 1.5; /* Set line height for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #333; /* Dark gray color for text */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Define primary, secondary, and accent colors */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --accent-color: #28a745; /* Green */
+}
+
+/* Basic link styling */
+a {
+    color: var(--primary-color); /* Primary color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Set default margin and padding for sections */
+header, main, footer {
+    margin: 0 1rem; /* Horizontal margin for sections */
+    padding: 2rem 0; /* Vertical padding for sections */
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif; /* Consistent font family for headings */
+    font-weight: bold; /* Make headings bold */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0.5rem; /* Space below headings */
+}
+
+h1 {
+    font-size: 2.5rem; /* Large font size for main headings */
+}
+
+h2 {
+    font-size: 2rem; /* Slightly smaller than h1 */
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1rem; /* Set font size for paragraphs */
+    line-height: 1.75; /* Increase line height for better readability */
+    margin-bottom: 1rem; /* Space below paragraphs */
+}
+
+/* Apply consistent margin to footer */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white; /* Light text color for footer */
+    padding: 1rem; /* Padding inside footer */
+    text-align: center; /* Center-align text in footer */
+}
