@@ -7,24 +7,23 @@
 
 /* Set base font family for the body */
 body {
-    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    font-family: 'Lato', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
-    transition: background-color 0.3s ease; /* Smooth transition on background change */
 }
 
 /* Define primary, secondary, and accent colors */
 :root {
-    --primary-color: #007bff; /* Blue */
-    --secondary-color: #6c757d; /* Gray */
-    --accent-color: #28a745; /* Green */
-    --background-color: #f4f4f4; /* Light background color */
-    --footer-background: #222; /* Dark background for footer */
-    --link-hover-color: #0056b3; /* Darker blue for hover */
+    --primary-color: #043A53;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --background-color: #f4f4f4;
+    --footer-background: #222;
+    --link-hover-color: #0056b3;
 }
 
 /* Basic link styling */
@@ -35,88 +34,138 @@ a {
 }
 
 a:hover {
-    color: var(--link-hover-color); /* Darker blue on hover */
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
-/* Header Section */
-header {
-    background: linear-gradient(135deg, #0062cc, #004085); /* Beautiful gradient background */
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-header p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-    opacity: 0.8;
-}
-
 /* Hero Section */
-.hero {
+#hero {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 100px 20px;
+    padding: 100px 80px;
+    width: 100%;
+    height: 700px;
     background-color: #f2f5f6;
     position: relative;
 }
 
-/* For Desktop: Two images side by side */
+/* Left and Right Images */
 .hero-left,
 .hero-right {
-    flex: 1;
-    height: 350px;
+    width: 180px;
+    height: 340px;
     background-position: center;
     background-size: cover;
     transition: transform 0.5s ease-in-out;
 }
 
+/* Left Image */
 .hero-left {
     background: url("Assets/Hero 5.png") no-repeat center center;
 }
 
+/* Right Image */
 .hero-right {
     background: url("Assets/Hero 6.png") no-repeat center center;
 }
 
-.hero:hover .hero-left {
+/* Hover Animation */
+#hero:hover .hero-left,
+#hero:hover .hero-right {
     transform: scale(1.05);
 }
 
-.hero:hover .hero-right {
-    transform: scale(1.05);
+/* Hero Content in the Center */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    text-align: left;
+    max-width: 600px;
 }
 
-/* For Mobile: Single image */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 50px 20px;
-    }
+/* Title */
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #12141D;
+}
 
-    .hero-left, .hero-right {
-        flex: none;
-        width: 100%;
-        height: 400px;
-    }
+/* Description */
+.hero-content p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #12141D;
+    opacity: 0.7;
+    line-height: 1.6;
+}
 
-    .hero-left {
-        background: url("Assets/Group 1.png") no-repeat center center;
-        background-size: cover;
-    }
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+}
 
-    .hero-right {
-        display: none; /* Hide the second image on mobile */
-    }
+/* Primary Button */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 55px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #03283d;
+    transform: translateY(-5px);
+}
+
+/* Secondary Button with Play Icon */
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border-radius: 55px;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Play Icon */
+.play-icon {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.play-circle {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.play-arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    transform: translate(-50%, -50%);
 }
 
 /* Main Section */
@@ -130,7 +179,6 @@ main h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--primary-color);
-    text-transform: capitalize;
     font-weight: 600;
 }
 
@@ -141,41 +189,12 @@ main p {
     line-height: 1.8;
 }
 
-/* Services Section */
+/* Section Spacing */
 section {
     margin-bottom: 50px;
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* Button Styles */
-button, .btn {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: #218838;
-    transform: translateY(-5px); /* Subtle hover effect */
-}
-
-/* Footer Section */
+/* Footer */
 footer {
     background-color: var(--footer-background);
     color: white;
@@ -188,22 +207,40 @@ footer p {
     opacity: 0.8;
 }
 
-/* Responsive adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem; /* Adjust heading size for smaller screens */
+    #hero {
+        flex-direction: column;
+        padding: 50px 20px;
+        height: auto;
+        align-items: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 140px;
+        height: 280px;
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
     }
 
     main h2 {
         font-size: 2rem;
     }
 
-    main p {
-        font-size: 1rem;
-    }
-
     footer p {
-        font-size: 0.875rem; /* Smaller font size for footer on mobile */
+        font-size: 0.875rem;
     }
 }
-
