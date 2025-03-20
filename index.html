@@ -4,37 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <!-- Link to external CSS -->
+    <meta name="description" content="TrustCo - Connect with High-Potential Customers using AI-driven insights.">
+    <title>TrustCo - Connect with High-Potential Customers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#" aria-label="Go to Home">
+                    <img src="Assets/logo.png" alt="TrustCo Logo">
+                </a>
+            </div>
+            <nav class="nav-links" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <button class="btn btn-login">Log In</button>
+                <button class="btn btn-signup">Sign Up</button>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Find High-Potential Customers with <span class="highlight">Trustco.</span></h1>
-                <p>We provide sales teams and professionals with the knowledge, skill, and discipline they need to be
-                    10x more successful.</p>
-                <div class="cta-buttons">
-                    <a href="#get-started" class="btn-primary">Get Started</a>
-                    <a href="#video" class="btn-secondary">
-                        <div class="play-icon">
-                            <div class="play-circle"></div>
-                            <div class="play-arrow"></div>
-                        </div>
-                        Check Our Video
-                    </a>
-                </div>
-            </div>
+        <div class="hero-left"></div>
 
-            <!-- Right Image -->
-            <div class="hero-image">
-                <img src="Assets/Hero 6.png" alt="Hero Image">
+        <div class="hero-content">
+            <h1>Find High-Potential Customers with <span class="highlight">Trustco.</span></h1>
+            <p>We provide sales teams and professionals with the knowledge, skill, and discipline they need to be 10x more successful.</p>
+
+            <div class="cta-buttons">
+                <a href="#get-started" class="btn-primary">Get Started</a>
+                <a href="#video" class="btn-secondary">
+                    <div class="play-icon">
+                        <div class="play-circle"></div>
+                        <div class="play-arrow"></div>
+                    </div>
+                    Check Our Video
+                </a>
             </div>
         </div>
+
+        <div class="hero-right"></div>
     </section>
 
     <!-- Trusted Companies Section -->
@@ -51,32 +71,61 @@
         </div>
     </section>
 
-    <!-- Main Section -->
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We are a company dedicated to making your life easier with our amazing products. Explore the best
-                features below!</p>
-        </section>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="card">
+                <h3>AI Analytics</h3>
+                <p>Gain data-driven insights with our AI-powered tools.</p>
+            </div>
+            <div class="card">
+                <h3>Customer Insights</h3>
+                <p>Understand customer needs through detailed reports.</p>
+            </div>
+            <div class="card">
+                <h3>Seamless Integration</h3>
+                <p>Integrate platforms effortlessly.</p>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Our Services</h2>
-            <p>We offer a range of services designed to meet your needs. From web development to design, we do it all!
-            </p>
-        </section>
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a technology-driven company focused on helping businesses build meaningful customer relationships using AI and data practices.</p>
+    </section>
 
-        <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to get in touch, feel free to contact us anytime.</p>
-            <p>Visit our <a href="#">Contact Page</a> to learn more.</p>
-        </section>
-    </main>
+    <!-- Our Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Data Analytics</h3>
+                <p>Analyze and interpret data to make informed decisions.</p>
+            </div>
+            <div class="card">
+                <h3>Automated Campaigns</h3>
+                <p>Launch personalized marketing campaigns effortlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 TrustCo. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
